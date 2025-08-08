@@ -1,3 +1,12 @@
+<<<<<<< HEAD
+from pydantic import BaseModel
+
+class CategoryBase(BaseModel):
+    name: str
+
+class CategoryCreate(CategoryBase):
+    pass
+=======
 from sqlalchemy import create_engine, Column, Integer, String, Float, ForeignKey, event
 from sqlalchemy.orm import sessionmaker, declarative_base, relationship, Session
 from pydantic import BaseModel
@@ -18,6 +27,7 @@ class CategoryBase(BaseModel):
     name: str
 
 class CategoryCreate(CategoryBase): pass
+>>>>>>> 992b61b3e04ca8ef3e0923fdc968021f4880b3da
 
 class CategoryOut(CategoryBase):
     id: int
